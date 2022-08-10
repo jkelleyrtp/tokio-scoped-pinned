@@ -1,0 +1,20 @@
+[package]
+name = "tokio-local-rt"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+tokio = { version = "1.20.1", features = ["rt-multi-thread"] }
+tokio-util = { version = "0.7.3", features = ["rt"] }
+
+[dev-dependencies]
+tokio = { version = "1.6.0", features = [
+    "rt-multi-thread",
+    "rt",
+    "test-util",
+    "macros",
+    "time",
+] }
